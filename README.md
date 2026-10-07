@@ -12,6 +12,7 @@ It was developed as part of a university coursework project to practice real-wor
   - Firebase Realtime Database / Firestore  
 - **UI:** XML layouts with Material Design components
 
+This is a public version of the app created by Alisa Bakhareva, Jinel Bautista and Mohamed Tamer Sherif
 
 ## Installation
 1. Clone the repository:
