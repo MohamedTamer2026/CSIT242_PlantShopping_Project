@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ProductDetail">
+
+    <!-- Hero Header -->
+    <RelativeLayout
+        android:id="@+id/detailHeader"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivProductImgBg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/notification_gradient"
+            android:contentDescription="Background" />
+
+        <ImageView
+            android:id="@+id/ivShadow"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:adjustViewBounds="true"
+            android:alpha="0.6"
+            android:src="@drawable/shadow"
+            android:contentDescription="Shadow" />
+
+        <ImageView
+            android:id="@+id/ivProductImg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/placeholder_plant"
+            android:scaleType="centerInside"
+            android:padding="10dp"
+            android:contentDescription="Product Image" />
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/back_100"
+            android:backgroundTint="@color/white"
+            android:scaleType="centerInside"
+            android:contentDescription="@string/back" />
+
+        <ImageButton
+            android:id="@+id/btnCart"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/shopping_basket_100"
+            android:backgroundTint="@color/white"
+            android:scaleType="centerInside"
+            android:contentDescription="Cart" />
+
+        <ImageButton
+            android:id="@+id/btnFavorite"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/search_background"
+            android:src="@android:drawable/btn_star_big_on"
+            app:tint="#767676"
+            android:contentDescription="Favorite" />
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/bottomCheckout"
+        app:layout_constraintTop_toBottomOf="@id/detailHeader">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="25dp">
+
+            <TextView
+                android:id="@+id/tvProductTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/tiltwarp"
+                android:text="Lucky-jade-plant"
+                android:textColor="@color/green"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvProductSpecies"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:alpha="0.6"
+                android:fontFamily="@font/tiltwarp"
+                android:text="Lorem Rissum"
+                android:textColor="@color/green"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvProductDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp"
+                android:alpha="0.8"
+                android:fontFamily="@font/tiltwarp"
+                android:lineSpacingExtra="4dp"
+                android:text="Plants make your life with minimal and happy love the plants more and enjoy life"
+                android:textColor="@color/green"
+                android:textSize="14sp" />
+
+            <!-- Specs Grid -->
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/btnDecreaseQty"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/input_background"
+                    android:padding="12dp"
+                    android:scaleType="fitCenter"
+                    android:src="@android:drawable/button_onoff_indicator_off"
+                    app:tint="@color/green"
+                    android:contentDescription="Decrease quantity" />
+
+                <TextView
+                    android:id="@+id/tvQuantity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:fontFamily="@font/tiltwarp"
+                    android:text="01"
+                    android:textColor="@color/green"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/btnIncreaseQty"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/input_background"
+                    android:padding="12dp"
+                    android:scaleType="fitCenter"
+                    android:src="@android:drawable/ic_input_add"
+                    app:tint="@color/green"
+                    android:contentDescription="Increase quantity" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Bottom Checkout Bar -->
+    <LinearLayout
+        android:id="@+id/bottomCheckout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/green"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="20dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="0.8"
+                android:fontFamily="@font/tiltwarp"
+                android:text="Total Price"
+                android:textColor="@color/white"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tvProductPriceDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/tiltwarp"
+                android:text="AED 12.99"
+                android:textColor="@color/white"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnAddToCartDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/brightgreen"
+            android:fontFamily="@font/tiltwarp"
+            android:paddingStart="40dp"
+            android:paddingEnd="40dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:text="Add to Cart"
+            android:textColor="@color/green"
+            android:textSize="16sp"
+            app:cornerRadius="15dp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

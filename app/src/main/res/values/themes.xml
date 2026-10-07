@@ -1,0 +1,27 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.CSIT242_Project" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="bottomNavigationStyle">@style/Widget.App.BottomNavigationView</item>
+    </style>
+
+    <style name="Theme.CSIT242_Project" parent="Base.Theme.CSIT242_Project" />
+
+    <style name="Widget.App.BottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="itemActiveIndicatorStyle">@style/App.BottomNavigationView.ActiveIndicator</item>
+        <item name="itemTextAppearanceActive">@style/BottomNavTextStyle</item>
+        <item name="itemTextAppearanceInactive">@style/BottomNavTextStyle</item>
+        <item name="itemIconTint">@color/nav_item_color</item>
+        <item name="itemTextColor">@color/nav_item_color</item>
+    </style>
+
+    <style name="App.BottomNavigationView.ActiveIndicator" parent="">
+        <item name="android:color">@android:color/transparent</item>
+    </style>
+
+    <style name="BottomNavTextStyle">
+        <item name="android:fontFamily">@font/tiltwarp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="fontFamily">@font/tiltwarp</item>
+    </style>
+</resources>

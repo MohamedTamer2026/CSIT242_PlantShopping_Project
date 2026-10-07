@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "259686135961",
+    "project_id": "project-d4347",
+    "storage_bucket": "project-d4347.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:259686135961:android:efa5011c56dfe3c74a6008",
+        "android_client_info": {
+          "package_name": "ae.ac.uowdubai.csit242_project"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBEKEmuq1JfYZDIj-3cYD3FCarvFFVkB3Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
